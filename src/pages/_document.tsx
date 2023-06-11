@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-title-in-document-head */
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -6,10 +7,10 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
 
-        <title>The Military Industrial Complex</title>
+        <title>The Iron Triangle</title>
         <meta
           name="description"
-          content="Not everything is as it seems. Learn about the deep connection between big business and the government."
+          content="Learn about the deep connection between big business and the government by viewing various artifacts from different eras in U.S. History."
         />
         <meta content="/favicon.ico" property="og:image" />
         <link rel="icon" href="/favicon.ico" />
