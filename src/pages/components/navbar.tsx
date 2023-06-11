@@ -6,20 +6,12 @@ import { useState, useEffect } from "react";
 import {
   SunIcon,
   MoonIcon,
-  DotsHorizontalIcon,
-  PlusIcon,
-  ViewGridIcon,
   LoginIcon,
   LogoutIcon,
   UserCircleIcon,
 } from "@heroicons/react/solid";
 
-const Navbar = (props: {
-  pattern: string;
-  patternBG: () => void;
-  menuHandler: () => void;
-  fontInitializer: () => void;
-}) => {
+const Navbar = () => {
   const { data: session } = useSession();
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -42,7 +34,7 @@ const Navbar = (props: {
           onClick={() => setTheme("light")}
         >
           {/* <div className="rings-halo absolute z-50 h-full w-full bg-contain bg-center bg-no-repeat opacity-70"></div> */}
-          <MoonIcon className="h-8 w-8" />
+          <MoonIcon className="h-6 w-6" />
         </button>
       );
     } else {
@@ -53,44 +45,33 @@ const Navbar = (props: {
           onClick={() => setTheme("dark")}
         >
           {/* <div className="rings-halo absolute z-50 h-full w-full bg-contain bg-center bg-no-repeat opacity-70"></div> */}
-          <SunIcon className="h-8 w-8" />
+          <SunIcon className="h-6 w-6" />
         </button>
       );
     }
   };
 
-  const patternSelector = () => {
-    if (props.pattern == "cross") {
-      return <PlusIcon className="h-full w-full" />;
-    } else if (props.pattern == "dots") {
-      return <DotsHorizontalIcon className="h-full w-full" />;
-    } else {
-      return <ViewGridIcon className="h-full w-full" />;
-    }
-  };
   return (
-    <nav className="border-b-[1.5px] border-gray-700 bg-white text-gray-900 shadow-lg duration-75 dark:bg-black dark:text-gray-400">
+    <nav className="relative z-20 border-b-[1.5px] border-gray-300 bg-white text-gray-900 shadow-lg duration-75 dark:border-gray-700 dark:bg-black dark:text-gray-400">
       <div className="mx-auto flex max-w-7xl flex-row justify-center">
         <div className="flex flex-row items-center">
           <Image
-            src="/images/MIC.png"
+            src="/images/peace.svg"
             alt="logo"
-            className="my-4 mx-4 inline h-12 w-12 duration-150 hover:animate-spin"
+            className=" svgfill my-5 mx-4 inline h-10 w-10 fill-red-500 duration-150 hover:animate-spin"
             height={400}
             width={400}
           />
           <Link href="/">
             <h1 className="relative hidden select-none text-2xl font-extrabold tracking-tight duration-75 dark:text-white sm:inline lg:text-2xl ">
-              Military Industrial Complex
+              Iron Triangle
             </h1>
           </Link>
         </div>
         <div className="ml-auto flex ">
           <div className="hidden h-full items-center py-2 px-2 duration-75 dark:text-white lg:flex">
-            <span className="text-lg lg:text-xl">
-              {session?.user?.name || "Guest"}
-            </span>
-            <div className="relative my-auto ml-2 inline h-12 w-12 rounded-full border-2 border-gray-300 duration-75 dark:border-gray-700">
+            <span className="text-lg  ">{session?.user?.name || "Guest"}</span>
+            <div className="relative my-auto ml-2 inline h-10 w-10 rounded-full border-2 border-gray-300 duration-75 dark:border-gray-700">
               {session?.user.image ? (
                 <Image
                   src={session?.user.image}
@@ -111,9 +92,9 @@ const Navbar = (props: {
             onClick={session ? () => void signOut() : () => void signIn()}
           >
             {session ? (
-              <LogoutIcon className="h-8 w-8" />
+              <LogoutIcon className="h-6 w-6" />
             ) : (
-              <LoginIcon className="h-8 w-8" />
+              <LoginIcon className="h-6 w-6" />
             )}
           </button>
 

@@ -36,57 +36,15 @@ const companies = [
 const Home: NextPage = () => {
   const [pattern, setPattern] = useState("cross");
   const [translate, setTranslate] = useState(false);
-  const [font, setFont] = useState("font-general");
-  const [imageState, setImageState] = useState(true);
-
-  const patternBG = () => {
-    if (pattern === "cross") {
-      setPattern("dots");
-    } else if (pattern === "dots") {
-      setPattern("paper");
-    } else {
-      setPattern("cross");
-    }
-  };
-
-  const patternStyles = () => {
-    const defaultPattern =
-      "z-5 absolute h-full w-full pattern-gray-500 dark:pattern-gray-400 pattern-bg-gray-300 dark:pattern-bg-gray-800 pattern-opacity-20 pattern-size-8 duration-150";
-    if (pattern === "cross") {
-      return defaultPattern + " pattern-cross";
-    } else if (pattern === "dots") {
-      return defaultPattern + " pattern-dots";
-    } else {
-      return defaultPattern + " pattern-paper";
-    }
-  };
 
   const menuHandler = () => {
     setTranslate(!translate);
   };
 
-  const fontInitializer = () => {
-    if (font === "font-general") {
-      setFont("font-satoshi");
-    } else if (font === "font-satoshi") {
-      // setFont("font-azeret");
-      setFont("font-clash");
-    } else if (font === "font-azeret") {
-      setFont("font-clash");
-    } else {
-      setFont("font-general");
-    }
-  };
-
   return (
     <main className="relative overflow-hidden  bg-white duration-150 dark:bg-black">
       <div className="font-hanken">
-        <Navbar
-          pattern={pattern}
-          patternBG={patternBG}
-          menuHandler={menuHandler}
-          fontInitializer={fontInitializer}
-        />
+        <Navbar />
         <button
           className="absolute bottom-4 right-5 z-20 rounded-2xl bg-red-500 p-2 text-white shadow-lg  duration-150 hover:bg-red-600"
           onClick={() => menuHandler()}
@@ -95,7 +53,7 @@ const Home: NextPage = () => {
         </button>
         <Chat translate={translate} setTranslate={setTranslate} />
         <section className="scrollbar max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] overflow-x-hidden overflow-y-scroll">
-          <header className="flex min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-hidden sm:max-h-[50rem]">
+          <header className="flex min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-hidden border-b border-b-gray-300 dark:border-b-gray-700 sm:max-h-[50rem]">
             <div className="mx-auto grid max-w-7xl grid-cols-2 px-8">
               <div className=" flex flex-col justify-center">
                 <div className="text-7xl font-extrabold ">
@@ -126,19 +84,27 @@ const Home: NextPage = () => {
               />
             </div>
           </header>
-
-          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 duration-150 sm:max-h-[50rem] sm:grid-cols-2">
-            <p className="col-span-2 text-center text-6xl font-extrabold uppercase">
-              Learn More
-            </p>
-
+          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-x-12 overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] sm:grid-cols-2 ">
             <Image
-              src="/images/platoon.png"
+              src="/images/iron-triangle.png"
               alt="flag"
               height={1000}
               width={1000}
               className="mx-auto my-auto w-full duration-150 dark:invert"
             />
+            <div className="flex flex-col justify-center ">
+              <div className="text-6xl font-extrabold ">
+                The <span className="text-red-500">Iron Triangle</span>
+              </div>
+              <div className="mt-4 text-2xl font-light">
+                The Iron Triangle is a term used to describe the relationship
+                between Congress, Bureaucracy, and Interest Groups. This
+                relationship is often characterized by the exchange of money for
+                political favors.
+              </div>
+            </div>
+          </section>
+          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-12 overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] sm:grid-cols-2">
             <div className="flex flex-col justify-center ">
               <div className="text-6xl font-extrabold ">
                 The{" "}
@@ -167,8 +133,22 @@ const Home: NextPage = () => {
                 - Dwight D. Eisenhower, 34th President of the United States
               </p>
             </div>
+            <Image
+              src="/images/oil.jpg"
+              alt="flag"
+              height={1000}
+              width={1000}
+              className="mx-auto my-auto w-full duration-150 dark:invert"
+            />
           </section>
-          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 duration-150 sm:max-h-[50rem] sm:grid-cols-2">
+          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-12 overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] sm:grid-cols-2">
+            <Image
+              src="/images/platoon.png"
+              alt="flag"
+              height={1000}
+              width={1000}
+              className="mx-auto my-auto w-full duration-150 dark:invert"
+            />
             <div className="flex flex-col justify-center ">
               <div className="text-6xl font-extrabold ">
                 A Legacy of <span className="text-red-500">Conflict</span>
@@ -209,15 +189,8 @@ const Home: NextPage = () => {
                 </Link>
               </div>
             </div>
-            <Image
-              src="/images/oil.jpg"
-              alt="flag"
-              height={1000}
-              width={1000}
-              className="mx-auto my-auto w-full duration-150 dark:invert"
-            />
           </section>
-          <section className="relative mx-auto h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 duration-150 sm:max-h-[50rem] ">
+          <section className="relative mx-auto h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 pt-8 duration-150 sm:max-h-[50rem] ">
             <p className=" text-center text-6xl font-extrabold uppercase">
               THE BIGGEST PLAYERS
             </p>
