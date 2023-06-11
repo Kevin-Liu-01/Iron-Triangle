@@ -52,7 +52,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-20 border-b-[1.5px] border-gray-300 bg-white text-gray-900 shadow-lg duration-75 dark:border-gray-700 dark:bg-black dark:text-gray-400">
+    <nav className="relative z-50 border-b-[1.5px] border-gray-300 bg-white text-gray-900 shadow-lg duration-75 dark:border-gray-700 dark:bg-black dark:text-gray-400">
       <div className="mx-auto flex max-w-7xl flex-row justify-center">
         <div className="flex flex-row items-center">
           <Image

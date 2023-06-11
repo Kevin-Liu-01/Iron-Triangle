@@ -84,116 +84,109 @@ const Home: NextPage = () => {
               />
             </div>
           </header>
-          <section className="relative flex h-[calc(100vh-5rem-1.5px)] items-center overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] ">
-            <div className="mx-auto  grid max-w-7xl  gap-x-12 sm:grid-cols-2">
-              <Image
-                src="/images/iron-triangle.png"
-                alt="flag"
-                height={1000}
-                width={1000}
-                className="mx-auto my-auto w-full duration-150 dark:invert"
-              />
-              <div className="flex flex-col justify-center ">
-                <div className="text-6xl font-extrabold ">
-                  The <span className="text-red-500">Iron Triangle</span>
-                </div>
-                <div className="mt-4 text-2xl font-light">
-                  The Iron Triangle is a term used to describe the relationship
-                  between Congress, Bureaucracy, and Interest Groups. This
-                  relationship is often characterized by the exchange of money
-                  for political favors.
-                </div>
+          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-x-12 overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] sm:grid-cols-2 ">
+            <Image
+              src="/images/iron-triangle.png"
+              alt="flag"
+              height={1000}
+              width={1000}
+              className="mx-auto my-auto w-full duration-150 dark:invert"
+            />
+            <div className="flex flex-col justify-center ">
+              <div className="text-6xl font-extrabold ">
+                The <span className="text-red-500">Iron Triangle</span>
+              </div>
+              <div className="mt-4 text-2xl font-light">
+                The Iron Triangle is a term used to describe the relationship
+                between Congress, Bureaucracy, and Interest Groups. This
+                relationship is often characterized by the exchange of money for
+                political favors.
               </div>
             </div>
           </section>
-          <section className="relative flex h-[calc(100vh-5rem-1.5px)] items-center overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] ">
-            <div className="mx-auto  grid max-w-7xl  gap-x-12 sm:grid-cols-2">
-              <div className="flex flex-col justify-center ">
-                <div className="text-6xl font-extrabold ">
-                  The{" "}
-                  <span className="text-red-500">
-                    Military Industrial Complex
-                  </span>
-                </div>
-                <div className="mt-4 text-2xl font-light">
-                  The{" "}
-                  <span className="text-red-500">
-                    Military Industrial Complex
-                  </span>{" "}
-                  is a{" "}
-                  <span className="text-red-500">
-                    {
-                      '"conjunction of an immense military establishment and a large arms industry"'
-                    }
-                  </span>{" "}
-                  that has a{" "}
-                  <span className="text-red-500">
-                    {'"total influence - economic, political, even spiritual"'}
-                  </span>{" "}
-                  on the United States.
-                </div>
-                <p className="mt-2 ml-2 italic">
-                  - Dwight D. Eisenhower, 34th President of the United States
-                </p>
+          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-12 overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] sm:grid-cols-2">
+            <div className="flex flex-col justify-center ">
+              <div className="text-6xl font-extrabold ">
+                The{" "}
+                <span className="text-red-500">
+                  Military Industrial Complex
+                </span>
               </div>
-              <Image
-                src="/images/oil.jpg"
-                alt="flag"
-                height={1000}
-                width={1000}
-                className="mx-auto my-auto w-full duration-150 dark:invert"
-              />
+              <div className="mt-4 text-2xl font-light">
+                The{" "}
+                <span className="text-red-500">
+                  Military Industrial Complex
+                </span>{" "}
+                is a{" "}
+                <span className="text-red-500">
+                  {
+                    '"conjunction of an immense military establishment and a large arms industry"'
+                  }
+                </span>{" "}
+                that has a{" "}
+                <span className="text-red-500">
+                  {'"total influence - economic, political, even spiritual"'}
+                </span>{" "}
+                on the United States.
+              </div>
+              <p className="mt-2 ml-2 italic">
+                - Dwight D. Eisenhower, 34th President of the United States
+              </p>
             </div>
+            <Image
+              src="/images/oil.jpg"
+              alt="flag"
+              height={1000}
+              width={1000}
+              className="mx-auto my-auto w-full duration-150 dark:invert"
+            />
           </section>
-          <section className="relative flex h-[calc(100vh-5rem-1.5px)] items-center overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] ">
-            <div className="mx-auto  grid max-w-7xl  gap-x-12 sm:grid-cols-2">
-              <Image
-                src="/images/platoon.png"
-                alt="flag"
-                height={1000}
-                width={1000}
-                className="mx-auto my-auto w-full duration-150 dark:invert"
-              />
-              <div className="flex flex-col justify-center ">
-                <div className="text-6xl font-extrabold ">
-                  A Legacy of <span className="text-red-500">Conflict</span>
-                </div>
-                <div className="mt-4 text-2xl font-light">
-                  From Vietnam to Iraq, the United States has been involved in{" "}
-                  <span className="text-red-500">conflicts</span> all over the
-                  world. <span className="text-red-500">For each one, </span>{" "}
-                  the{" "}
-                  <span className="text-red-500">
-                    military industrial complex
-                  </span>{" "}
-                  has played a role in shaping the outcome.
-                </div>
-                <div className="mt-4 grid grid-cols-4 gap-4">
-                  <Link
-                    href="/eras/1940s"
-                    className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
-                  >
-                    1940s
-                  </Link>
-                  <Link
-                    href="/eras/1950s"
-                    className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
-                  >
-                    1950s
-                  </Link>
-                  <Link
-                    href="/eras/1960s"
-                    className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
-                  >
-                    1960s
-                  </Link>
-                  <Link
-                    href="/eras/1970s+"
-                    className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
-                  >
-                    1970s+
-                  </Link>
-                </div>
+          <section className="relative mx-auto grid h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-12 overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] sm:grid-cols-2">
+            <Image
+              src="/images/platoon.png"
+              alt="flag"
+              height={1000}
+              width={1000}
+              className="mx-auto my-auto w-full duration-150 dark:invert"
+            />
+            <div className="flex flex-col justify-center ">
+              <div className="text-6xl font-extrabold ">
+                A Legacy of <span className="text-red-500">Conflict</span>
+              </div>
+              <div className="mt-4 text-2xl font-light">
+                From Vietnam to Iraq, the United States has been involved in{" "}
+                <span className="text-red-500">conflicts</span> all over the
+                world. <span className="text-red-500">For each one, </span> the{" "}
+                <span className="text-red-500">
+                  military industrial complex
+                </span>{" "}
+                has played a role in shaping the outcome.
+              </div>
+              <div className="mt-4 grid grid-cols-4 gap-4">
+                <Link
+                  href="/eras/1940s"
+                  className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
+                >
+                  1940s
+                </Link>
+                <Link
+                  href="/eras/1950s"
+                  className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
+                >
+                  1950s
+                </Link>
+                <Link
+                  href="/eras/1960s"
+                  className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
+                >
+                  1960s
+                </Link>
+                <Link
+                  href="/eras/1970s+"
+                  className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
+                >
+                  1970s+
+                </Link>
               </div>
             </div>
           </section>
