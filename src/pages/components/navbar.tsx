@@ -9,6 +9,9 @@ import {
   LoginIcon,
   LogoutIcon,
   UserCircleIcon,
+  HomeIcon,
+  ClockIcon,
+  ClipboardListIcon,
 } from "@heroicons/react/solid";
 
 const Navbar = () => {
@@ -66,6 +69,27 @@ const Navbar = () => {
             <h1 className="relative hidden select-none text-2xl font-extrabold tracking-tight duration-75 dark:text-white sm:inline lg:text-2xl ">
               Iron Triangle
             </h1>
+          </Link>
+        </div>
+
+        <div className="mx-auto hidden flex-row items-center text-sm lg:flex">
+          <Link
+            href="/"
+            className="relative mx-4 flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] "
+          >
+            <HomeIcon className="mr-2 h-4 w-4" /> Home
+          </Link>
+          <Link
+            href="/artifacts"
+            className="relative mx-4 flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] "
+          >
+            <ClockIcon className="mr-2 h-4 w-4" /> Eras
+          </Link>
+          <Link
+            href="/sources"
+            className="relative mx-4 flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] "
+          >
+            <ClipboardListIcon className="mr-2 h-4 w-4" /> Sources
           </Link>
         </div>
         <div className="ml-auto flex ">

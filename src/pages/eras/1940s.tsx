@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChatIcon, ArrowUpIcon } from "@heroicons/react/solid";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import Chat from "../components/chatgpt";
 
 import * as THREE from "three";
@@ -81,7 +82,9 @@ const Forties: NextPage = () => {
               className="absolute w-full opacity-20"
             />
             <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-8 ">
-              <p className="text-sm uppercase text-red-500">The 1940s</p>
+              <p className="text-lg font-semibold uppercase text-red-500">
+                The 1940s
+              </p>
               <span className=" text-center text-6xl font-extrabold text-red-500">
                 The Arsenal of Democracy
               </span>
@@ -112,9 +115,11 @@ const Forties: NextPage = () => {
                   className="mx-auto my-auto w-full duration-150 "
                 />
                 <div className="flex flex-col justify-center ">
-                  <div className="text-6xl font-extrabold ">
+                  <div className="text-5xl font-extrabold ">
                     Artifact 1:{" "}
-                    <span className="text-red-500">The Truman Committee</span>
+                    <span className="text-red-500">
+                      The Truman Committee (1941)
+                    </span>
                   </div>
                   <div className="mt-4 text-2xl font-light">
                     Like the Nye Committee of the 1930s, the 1941 Truman
@@ -140,9 +145,11 @@ const Forties: NextPage = () => {
                   className="mx-auto my-auto w-full duration-150 "
                 />
                 <div className="flex flex-col justify-center ">
-                  <div className="text-6xl font-extrabold ">
+                  <div className="text-5xl font-extrabold ">
                     Artifact 2:{" "}
-                    <span className="text-red-500">Boeing Company Plant 2</span>
+                    <span className="text-red-500">
+                      Boeing Company Plant 2 (1943)
+                    </span>
                   </div>
                   <div className="mt-4 text-2xl font-light">
                     During World War 2, an immense 297,000 aircraft were
@@ -158,6 +165,7 @@ const Forties: NextPage = () => {
             <div className="col-span-2 mx-auto max-w-7xl py-4">
               {`In World War II, large manufacturing firms enjoyed a disproportionate share of defense spending, as the top 100 prime contractors claimed about two-thirds of the total value of awards. The concentration of military research and development contracts was even more pronounced, with the top 68 corporations receiving two-thirds of the R&D awards, and the top 10 securing nearly two-fifths of the total. During the war, the government emerged as the dominant investor, contributing over $17 billion, which accounted for about two-thirds of all investment. In addition to funding ammunition plants, the government embarked on ambitious construction projects, including shipyards, steel and aluminum mills, and chemical plants. The aircraft industry experienced remarkable growth, with government investment and procurement propelling it to become the nation's largest sector, producing a staggering 297,000 aircraft by the war's end. This level of government involvement could be characterized as "war socialism." However, there was a distinctly American twist to this wartime economy that merits the term "war fascism." Rather than operating directly, the government relied on a select group of contractors to manage the government-financed plants. Remarkably, just 26 firms were entrusted with the use of half the value of all governmentally financed industrial facilities leased to private contractors. And just 3 - Boeing, Vega, and Douglas - built the 3rd most-produced bomber of all time, the B-17. This concentration of power among a small group of contractors underscored the entanglement of business interests with the government during the war. It highlighted the influence wielded by these contractors in shaping the course of war production and decision-making. The allocation of significant resources and control over crucial industrial facilities to a limited number of firms revealed the intricate web of relationships between the military-industrial complex and the government.`}
             </div>
+            <Footer />
           </section>
 
           <button

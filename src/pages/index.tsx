@@ -6,6 +6,7 @@ import { useState } from "react";
 // import { api } from "~/utils/api";
 import { ArrowRightIcon, ChatIcon } from "@heroicons/react/solid";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import Chat from "./components/chatgpt";
 
 const companies = [
@@ -34,7 +35,6 @@ const companies = [
 ];
 
 const Home: NextPage = () => {
-  const [pattern, setPattern] = useState("cross");
   const [translate, setTranslate] = useState(false);
 
   const menuHandler = () => {
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <section className="relative mx-auto h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 pt-8 duration-150 sm:max-h-[50rem] ">
+          <section className="relative mx-auto h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 pt-12 duration-150 sm:max-h-[50rem] ">
             <p className=" text-center text-6xl font-extrabold uppercase">
               THE BIGGEST PLAYERS
             </p>
@@ -221,6 +221,7 @@ const Home: NextPage = () => {
               ))}
             </div>
           </section>
+          <Footer />
         </section>
       </div>
     </main>
