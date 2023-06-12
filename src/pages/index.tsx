@@ -197,7 +197,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <section className="relative mx-auto h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 pt-12 duration-150 sm:max-h-[50rem] ">
+          <section className="relative mx-auto min-h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 py-12 duration-150  ">
             <p className=" text-center text-6xl font-extrabold uppercase">
               THE BIGGEST PLAYERS
             </p>
