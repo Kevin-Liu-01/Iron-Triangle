@@ -75,7 +75,7 @@ const Forties: NextPage = () => {
             }
           >
             <Image
-              src="/images/headers/1940s.jpeg"
+              src="/images/headers/1940s.gif"
               alt="1940s banner"
               width={1000}
               height={1000}

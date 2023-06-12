@@ -75,7 +75,7 @@ const Fifties: NextPage = () => {
             }
           >
             <Image
-              src="/images/headers/1950s.jpg"
+              src="/images/headers/1950s.gif"
               alt="1950s banner"
               width={1000}
               height={1000}
