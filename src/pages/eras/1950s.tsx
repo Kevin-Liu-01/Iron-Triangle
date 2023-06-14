@@ -66,7 +66,7 @@ const Fifties: NextPage = () => {
                   alt="truman-committee"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150 "
                 />
                 <div className="flex flex-col justify-center ">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -88,7 +88,7 @@ const Fifties: NextPage = () => {
               </div>
             </div>
 
-            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 sm:px-0">
+            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 ">
               {`During the post-World War II era, the military-industrial complex played a significant role in fueling the Korean War and propping up defense spending. The complex capitalized on the perceived communist threat and created a climate of fear that justified extensive defense budgets. Private defense companies expanded their operations to meet the demand for weapons and military equipment. The Korean War, which began in 1950, became a testing ground for new weapons and technologies, fueling the arms race between the United States and the Soviet Union. The defense industry lobbied for increased defense budgets, arguing that a strong military was essential for deterring aggression and protecting American interests abroad. This influence extended to the political sphere, with defense contractors exerting pressure on policymakers to maintain high military expenditures. During the Korean War, the Koreans and Chinese dropped propaganda posters on UN trench lines to undermine morale and raise concerns about the military-industrial complex. One poster depicted a dead soldier with blood flowing as coins into Uncle Sam's "war profits," suggesting that American soldiers were sacrificial pawns for war profiteers. This aimed to provoke doubt and dissent among UN forces. Another poster questioned the complex's priorities, stating, "Mr. Moneybags is in Florida this Christmas. Where are you?" It highlighted the stark contrast between soldiers' sacrifices and the luxurious lifestyles of those allegedly profiting from the war, aiming to sow disillusionment and resentment among UN troops. These posters were part of a larger psychological warfare campaign to undermine the resolve of UN forces and erode support for the war effort. By tapping into existing concerns about the military-industrial complex, they sought to exploit anti-war sentiments and raise doubts about the motives and fairness of the conflict.`}
             </div>
             <div className="w-[100vw] bg-gray-200 p-8 dark:bg-[#101010]">
@@ -98,7 +98,7 @@ const Fifties: NextPage = () => {
                   alt="gloriosa victoria"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150 "
                 />
                 <div className="flex flex-col justify-center ">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -119,7 +119,7 @@ const Fifties: NextPage = () => {
               </div>
             </div>
 
-            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 sm:px-0">
+            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4">
               {`From the late 19th century until 1944, Guatemala was governed by authoritarian rulers that exploited workers to produce coffee and bananas and line their pockets. During this time period, the US-backed United Fruit Company struck a deal with these rulers to seize vast swaths of Guatemalan land for American produce. In 1944, following an uprising that deposed dictator Jorge Ubico, Guatemala had its first democratic elections, leading to the tenures of Juan Jose Arevalo and Jacobo Arbenz. Both of these presidents were social reformers who instituted a variety of programs to lift workers from poverty and take back land from the UFC to nationalize the agricultural industry. Under Arbenz in particular, Decree 900 led to the redistribution of the land of 1.7k estates to 500k people. Arbenz’s policies ran afoul of the UFC, which extensively petitioned the US government to stage a coup. In 1952, Truman authorized Operation PBFortune, which would have mobilized the US’s puppet dictators in Nicaragua (Garcia) and the Dominican Republic (Trujillo) to overthrow Arbenz. Once the plan was leaked, however, it was canceled. In 1954, after the election of Dwight D. Eisenhower, the plan was revived again as Operation PBSuccess, due in part to the UFC-affiliated Dulles brothers (John Foster and Allen) becoming Secretary of State and CIA Director under his administration. PBSuccess was a two part plan to send a CIA-trained unit of 480 men to stage an uprising under fascist Carlos Armas, and wage a radio propaganda campaign to turn civilians against Arbenz. Armas and his men invaded the country on June 18th, and 9 days after, Arbenz was forced to resign. This coup was staged under the pretense that Arbenz was a communist and a threat to national security.`}
             </div>
             <div className="w-[100vw] bg-gray-200 p-8 dark:bg-[#101010]">
@@ -129,7 +129,7 @@ const Fifties: NextPage = () => {
                   alt="the power elite"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg  duration-150"
                 />
                 <div className="flex flex-col justify-center sm:col-span-2">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -152,7 +152,7 @@ const Fifties: NextPage = () => {
               </div>
             </div>
 
-            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 sm:px-0">
+            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 ">
               {`The Power Elite is a book by sociologist C. Wright Mills, published in 1956, that analyzes the structure and role of the dominant groups in American society. One of the main arguments of the book is that the United States is ruled by a "power elite" that consists of the top leaders of corporate, political, and military bureaucracies, who share similar interests and act in concert to shape public policy and maintain their privileged position. While it would be another 5 years until the term “military industrial complex” would be coined, Mills argued that it had a disproportionate influence on American politics and society, as it promotes a permanent state of war readiness, fosters a militaristic culture, consumes vast amounts of public resources, and undermines democratic accountability. Mills identified several principles that underlie the operation and expansion of the MIC. First, he claimed that there is a "military metaphysic" that pervades the power elite, who view military force as the solution to any problem and regard war as an inevitable condition of human affairs. Second, he contended that there is a "structural imperative" that drives the MIC to constantly seek new enemies to justify its existence. Third, he observed that there is a "cultural apparatus" that supports the MIC, which includes various media, educational, and ideological institutions that propagate a pro-military worldview. Fourth, he noted that there is a "psychological wage" that attracts people to support the MIC, which consists of a sense of patriotism, heroism, adventure, and security. Mills warned that the MIC poses a serious danger to American democracy and peace, as it erodes civil liberties, distorts social priorities, increases international tensions, and contributes to fearmongering. He called for a transformation of the power structure and the culture of the United States that would disenfranchise the power elite.`}
             </div>
             <Footer />

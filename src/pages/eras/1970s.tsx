@@ -65,7 +65,7 @@ const Sixties: NextPage = () => {
                   alt="napalm"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150 "
                 />
                 <div className="flex flex-col justify-center sm:col-span-2">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -86,7 +86,7 @@ const Sixties: NextPage = () => {
               </div>
             </div>
 
-            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 sm:px-0">
+            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4">
               {`This exhibit depicts the Lockheed C-5A, a military transport aircraft that is the first military project to have a $1 billion cost overrun. Throughout the development program, the aircraft was marred with weight issues, failing to support up to 150% limit load (it would stall at 125%), as was required to start production. Because of its inefficiency and cost, the Air Force reduced its orders of the C-5A in 1970, leaving Lockheed in a bind. By 1971, the cost overruns to the C-5A, along with overruns for the L-1011 TriStar commercial airliner, brought Lockheed to the brink of bankruptcy. Private banks cut off lending to Lockheed by the spring of 1971, and soon enough it looked like Lockheed was going under. Lockheed Martin asked Congress for a bailout in loan guarantees totaling $250 million. If Congress failed to bail the company out, Lockheed would collapse and take “25,000 to 30,000 jobs” in thirty-four states along with it, not to mention its importance to US national security interests. Lockheed gave Congress an ultimatum, putting a metaphorical gun to lawmakers’ heads. Democratic representative William Moorhead from Pennsylvania summed up the situation best: “This is like an eighty-ton dinosaur who comes to your door and says, “If you don’t feed me I will die and what are you going to do with eighty tons of stinking dinosaur in your yard?” Lockheed became one of the first companies to be dubbed, “too big to fail,” as Bill Hartung suggested in his book Prophets of War. Congress did not want to lose its investment in the plane, and to cut jobs so close on the heels of a recession and amid rising inflation rates.`}
             </div>
             <div className="w-[100vw] bg-gray-200 p-8 dark:bg-[#101010]">
@@ -96,7 +96,7 @@ const Sixties: NextPage = () => {
                   alt="iraq resolution"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150 "
                 />
                 <div className="mt-4 flex flex-col justify-center sm:col-span-2 sm:mt-0">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -116,7 +116,7 @@ const Sixties: NextPage = () => {
               </div>{" "}
             </div>
 
-            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 sm:px-0">
+            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2">
               {`This resolution was passed by Congress post 9-11 and authorized US military intervention in Iraq through Operation Iraqi Freedom. 
                 Iraqi Freedom was launched on March 20, 2003, considered the start of the Iraq War. Its goal was to overthrow Saddam Hussein's regime, 
                 eliminate Iraq's alleged weapons of mass destruction (WMDs), and promote democracy in the region. The Bush administration, 
@@ -136,7 +136,7 @@ const Sixties: NextPage = () => {
                   alt="f35"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150 "
                 />
                 <div className="mt-4 flex flex-col justify-center sm:mt-0">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -152,7 +152,7 @@ const Sixties: NextPage = () => {
               </div>{" "}
             </div>
 
-            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 sm:px-0">
+            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2">
               {`The F-35 Fighter Jet is an ongoing Lockheed Martin project since 2001, in production since 2006, and first used in combat by the Israeli Air Force in 2018. However, it has not completed its operational testing and evaluation phase and has not met its original requirements for stealth, maneuverability, and reliability. Ironically, the F-35 program’s costs have been soaring more than the plane itself; it’s expected to reach $1.7 trillion by 2070, the scheduled end of the program. Part of this is because of the level of control Lockheed exerts over the program – control that the government itself doesn’t have. The company produces not only the F-35 but also its pilot training gear, built-in logistics systems, and support equipment, such as carts and rigs. Lockheed even has complete control over the production supply chain and maintenance of the planes. This extreme example of vertical integration has put it at odds with the US government. “I had a sense, after my first 90 days, that the government was not in charge of the program… all of the major decisions… were really all being made by Lockheed Martin, and the program office was just kind of watching,” Air Force lieutenant Christopher Bogdan, executive officer of the F-35 program, was reported saying. And what can the government do about it anyway? Parts for the F-35 are made in forty-five states and Puerto Rico, and with the sheer amount of subcontractors involved in the production, almost 300k people depend on this program to feed their families. The sizable amount of jobs that would be lost across the country if this program were to be shut down deters even the most progressive legislators, like independent Vermont senator Bernie Sanders, from stopping production of the F-35 in their states.`}
             </div>
 

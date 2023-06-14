@@ -77,7 +77,7 @@ const Forties: NextPage = () => {
                   alt="truman-committee"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150"
                 />
                 <div className="mt-4 flex flex-col justify-center sm:mt-0">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -99,7 +99,7 @@ const Forties: NextPage = () => {
               </div>{" "}
             </div>
 
-            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 sm:px-0">
+            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 ">
               {
                 "Drawing inspiration from the Nye Committee of the 1930s, which examined the role of the munitions industry in the United States' entry into World War I, the Truman Committee focused on investigating the military-industrial complex (MIC) and its impact on the war effort. Its main objective was to ensure that defense contracts were allocated efficiently and free from wasteful practices, fraud, and excessive profiteering. Through a series of hearings and investigations, the Truman Committee thoroughly examined various aspects of defense production, procurement, and logistics. It delved into the operations of defense contractors, government agencies, and military branches to uncover inefficiencies and corruption within the war machinery. The committee's investigations exposed alarming instances of overpricing, substandard production, and fraudulent practices by defense contractors. These findings shed light on the urgent need for transparency, accountability, and cost-effectiveness in defense contracting. As a result of the committee's efforts, significant reforms were implemented in defense procurement and production. The Truman Committee recommended changes such as introducing competitive bidding processes, implementing cost controls, and establishing standardized pricing to enhance efficiency and eliminate wasteful practices. These reforms resulted in substantial cost savings, streamlined production, and improved oversight of defense spending. Furthermore, the Truman Committee's investigations brought attention to the complex relationship between business interests and the government in times of war. The committee's findings highlighted the potential for undue influence, conflicts of interest, and the necessity of robust oversight mechanisms to prevent abuse and corruption."
               }
@@ -111,7 +111,7 @@ const Forties: NextPage = () => {
                   alt="b17_factory"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150 "
                 />
                 <div className="flex flex-col justify-center ">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -131,7 +131,7 @@ const Forties: NextPage = () => {
               </div>{" "}
             </div>
 
-            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 sm:px-0">
+            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 ">
               {`During World War II, a disproportionate share of defense spending and research and development contracts went to large manufacturing firms. Around two-thirds of the total value of awards were claimed by the top 100 prime contractors. The concentration of military research and development contracts was even more pronounced, with the top 68 corporations receiving two-thirds of the R&D awards, and the top 10 securing nearly two-fifths of the total. The government played a major role as the primary investor, contributing over $17 billion, which accounted for about two-thirds of all investment. In addition to funding ammunition plants, the government undertook ambitious construction projects, including shipyards, steel and aluminum mills, and chemical plants. The aircraft industry experienced remarkable growth, propelled by government investment and procurement, ultimately becoming the nation's largest sector and producing a staggering 297,000 aircraft by the end of the war. This level of government involvement can be described as "war socialism." However, one source describes it as “war fascism.” Rather than directly operating these government-financed plants, the government entrusted a select group of contractors to manage them. Surprisingly, just 26 firms were given the responsibility of half the value of all governmentally financed industrial facilities leased to private contractors. Among them, Boeing, Vega, and Douglas were the only three companies involved in building the third most-produced bomber of all time, the B-17. This concentration of power among a small group of contractors underscored the entanglement of business interests with the government during the war. It highlighted the influence wielded by these contractors in shaping the course of war production and decision-making. The allocation of significant resources and control over crucial industrial facilities to a limited number of firms revealed the intricate web of relationships between the military-industrial complex and the government.`}
             </div>
             <Footer />

@@ -88,7 +88,7 @@ const Sixties: NextPage = () => {
               </div>
             </div>
 
-            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 sm:px-0">
+            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4">
               <div className="mb-4 rounded-lg bg-gray-100 p-2 shadow-inner dark:bg-[#101010]">
                 <p className="italic text-red-500">
                   “Until the latest of our world conflicts, the United States
@@ -122,7 +122,7 @@ const Sixties: NextPage = () => {
                   alt="napalm"
                   height={1000}
                   width={1000}
-                  className="mx-auto my-auto w-full duration-150 "
+                  className="mx-auto my-auto w-full rounded-lg duration-150 "
                 />
                 <div className="flex flex-col justify-center sm:col-span-2">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
@@ -145,7 +145,7 @@ const Sixties: NextPage = () => {
               </div>
             </div>
 
-            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 sm:px-0">
+            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4">
               {`During the Vietnam War, the US military used napalm, a flammable gel that sticks to human skin and causes severe burns, as a weapon against the Viet Cong and North Vietnamese forces. It is estimated that over 352,000 tonnes of napalm were dropped on Vietnam during the war, devastating millions of acres of land and killing thousands of civilians. A major culprit behind this devastation was Dow Chemical, a chemicals company that became the sole manufacturer and supplier of napalm for the US military from 1965 to 1969. Dow Chemical and its representatives used their resources to lobby the government to pursue policies that favored their interests, such as increasing military spending, expanding the draft, bombing North Vietnam, and supporting anti-communist regimes in Southeast Asia. They also used public relations techniques to justify their involvement in the war. For example, Dow Chemical claimed that napalm was a humane weapon that saved American lives, and that it was fulfilling its patriotic duty by supporting the government. By exerting political pressure on the government, Dow Chemical and other such companies contributed to prolonging the war in Vietnam, as they made it harder for the government to change its strategy, all while receiving millions of dollars in contracts and subsidies. However, they also faced increasing resistance from the public, the media, and their own shareholders, forcing them to reconsider their role in the war. In 1969, Dow Chemical voted against renewing its $5 million dollar a year Pentagon napalm contract. Dow Chemical was also one of the primary producers of Agent Orange, a herbicide that was used to destroy foliage in enemy territory and expose hostile soldiers. This has predisposed over 4 million Vietnamese and thousands of American soldiers, as well as their children, to cancer, genetic disorders, and other health problems.`}
             </div>
 
