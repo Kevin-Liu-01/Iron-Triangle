@@ -1,51 +1,11 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { type NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ChatIcon, ArrowUpIcon } from "@heroicons/react/solid";
+import { ChatIcon, ArrowDownIcon } from "@heroicons/react/solid";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Chat from "../components/chatgpt";
-
-import * as THREE from "three";
-import React, { useRef, useEffect, useState } from "react";
-import {
-  Canvas,
-  useFrame,
-  type ThreeElements,
-  useLoader,
-} from "@react-three/fiber";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-
-function Model(props: ThreeElements["mesh"]) {
-  const mesh = useRef<THREE.Mesh>(null!);
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-  useFrame((state, delta) => (mesh.current.rotation.x += delta));
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onClick={() => setActive(!active)}
-      onPointerOver={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-    </mesh>
-  );
-}
-
-function OBJModel() {
-  const obj = useLoader(OBJLoader, "/models/model.obj");
-  obj.scale.set(20, 20, 20); // Set the scale to 1000px x 1000px
-  const mesh = obj.children[0];
-  if (mesh instanceof THREE.Mesh) {
-    mesh.rotation.y = 0.01; // Set the rotation speed
-  }
-  return <primitive object={obj} />;
-}
+import React, { useState } from "react";
 
 const Fifties: NextPage = () => {
   const [translate, setTranslate] = useState(false);
@@ -85,10 +45,13 @@ const Fifties: NextPage = () => {
               <p className="text-lg font-semibold uppercase text-red-500">
                 The 1950s
               </p>
-              <span className=" text-center text-6xl font-extrabold text-red-500">
+              <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 Lone Superpower
               </span>
-              <p className="col-span-2 mt-8">
+              <p className="mt-2 text-lg font-semibold text-red-600">
+                Created by Sharabh Ojha
+              </p>
+              <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
                 {
                   "The war has been over for a few years, and yet it seems that we never left. In the 1950s, the business and military-industrial complex holds significant sway over American policy, with the ongoing Korean War and our standoff with the USSR. It makes sense – we can’t let the Communists win on their fronts. Otherwise, they’ll come for us next. As the United States and the Soviet Union engage in an intense arms race and the nation grapples with fears of Communism, defense contractors are successfully advocating against disarmament, arguing instead for increased war production. It’s starting to look like contractors aren’t pressuring policy makers anymore either. Rather, both are in cahoots to heighten defense spending and military preparedness. Endless profits and a country safe from imminent Communist incursion? It’s a win-win situation."
                 }
@@ -199,7 +162,7 @@ const Fifties: NextPage = () => {
             onClick={() => setShowHeader(!showHeader)}
             className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
           >
-            <ArrowUpIcon
+            <ArrowDownIcon
               className={
                 showHeader
                   ? "h-6 w-6 text-white duration-150"

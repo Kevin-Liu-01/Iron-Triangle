@@ -1,51 +1,11 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { type NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ChatIcon, ArrowUpIcon } from "@heroicons/react/solid";
+import { ChatIcon, ArrowDownIcon } from "@heroicons/react/solid";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Chat from "../components/chatgpt";
-
-import * as THREE from "three";
-import React, { useRef, useEffect, useState } from "react";
-import {
-  Canvas,
-  useFrame,
-  type ThreeElements,
-  useLoader,
-} from "@react-three/fiber";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-
-function Model(props: ThreeElements["mesh"]) {
-  const mesh = useRef<THREE.Mesh>(null!);
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-  useFrame((state, delta) => (mesh.current.rotation.x += delta));
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onClick={() => setActive(!active)}
-      onPointerOver={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-    </mesh>
-  );
-}
-
-function OBJModel() {
-  const obj = useLoader(OBJLoader, "/models/model.obj");
-  obj.scale.set(20, 20, 20); // Set the scale to 1000px x 1000px
-  const mesh = obj.children[0];
-  if (mesh instanceof THREE.Mesh) {
-    mesh.rotation.y = 0.01; // Set the rotation speed
-  }
-  return <primitive object={obj} />;
-}
+import React, { useState } from "react";
 
 const Forties: NextPage = () => {
   const [translate, setTranslate] = useState(false);
@@ -85,10 +45,13 @@ const Forties: NextPage = () => {
               <p className="text-lg font-semibold uppercase text-red-500">
                 The 1940s
               </p>
-              <span className=" text-center text-6xl font-extrabold text-red-500">
+              <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 The Arsenal of Democracy
               </span>
-              <p className="col-span-2 mt-8">
+              <p className="mt-2 text-lg font-semibold text-red-600">
+                Created by Liam Hoffman
+              </p>
+              <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
                 Welcome to the 1940s. You have joined us as we are raring to go
                 to war against the Nazis in Europe and the Japanese in Asia. Our
                 greatest allies today are our defense contractors, producing our
@@ -169,7 +132,7 @@ const Forties: NextPage = () => {
             </div>
 
             <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 sm:px-0">
-              {`In World War II, large manufacturing firms enjoyed a disproportionate share of defense spending, as the top 100 prime contractors claimed about two-thirds of the total value of awards. The concentration of military research and development contracts was even more pronounced, with the top 68 corporations receiving two-thirds of the R&D awards, and the top 10 securing nearly two-fifths of the total. During the war, the government emerged as the dominant investor, contributing over $17 billion, which accounted for about two-thirds of all investment. In addition to funding ammunition plants, the government embarked on ambitious construction projects, including shipyards, steel and aluminum mills, and chemical plants. The aircraft industry experienced remarkable growth, with government investment and procurement propelling it to become the nation's largest sector, producing a staggering 297,000 aircraft by the war's end. This level of government involvement could be characterized as "war socialism." However, there was a distinctly American twist to this wartime economy that merits the term "war fascism." Rather than operating directly, the government relied on a select group of contractors to manage the government-financed plants. Remarkably, just 26 firms were entrusted with the use of half the value of all governmentally financed industrial facilities leased to private contractors. And just 3 - Boeing, Vega, and Douglas - built the 3rd most-produced bomber of all time, the B-17. This concentration of power among a small group of contractors underscored the entanglement of business interests with the government during the war. It highlighted the influence wielded by these contractors in shaping the course of war production and decision-making. The allocation of significant resources and control over crucial industrial facilities to a limited number of firms revealed the intricate web of relationships between the military-industrial complex and the government.`}
+              {`During World War II, a disproportionate share of defense spending and research and development contracts went to large manufacturing firms. Around two-thirds of the total value of awards were claimed by the top 100 prime contractors. The concentration of military research and development contracts was even more pronounced, with the top 68 corporations receiving two-thirds of the R&D awards, and the top 10 securing nearly two-fifths of the total. The government played a major role as the primary investor, contributing over $17 billion, which accounted for about two-thirds of all investment. In addition to funding ammunition plants, the government undertook ambitious construction projects, including shipyards, steel and aluminum mills, and chemical plants. The aircraft industry experienced remarkable growth, propelled by government investment and procurement, ultimately becoming the nation's largest sector and producing a staggering 297,000 aircraft by the end of the war. This level of government involvement can be described as "war socialism." However, one source describes it as “war fascism.” Rather than directly operating these government-financed plants, the government entrusted a select group of contractors to manage them. Surprisingly, just 26 firms were given the responsibility of half the value of all governmentally financed industrial facilities leased to private contractors. Among them, Boeing, Vega, and Douglas were the only three companies involved in building the third most-produced bomber of all time, the B-17. This concentration of power among a small group of contractors underscored the entanglement of business interests with the government during the war. It highlighted the influence wielded by these contractors in shaping the course of war production and decision-making. The allocation of significant resources and control over crucial industrial facilities to a limited number of firms revealed the intricate web of relationships between the military-industrial complex and the government.`}
             </div>
             <Footer />
           </section>
@@ -178,7 +141,7 @@ const Forties: NextPage = () => {
             onClick={() => setShowHeader(!showHeader)}
             className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
           >
-            <ArrowUpIcon
+            <ArrowDownIcon
               className={
                 showHeader
                   ? "h-6 w-6 text-white duration-150"

@@ -1,51 +1,11 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { type NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ChatIcon, ArrowUpIcon } from "@heroicons/react/solid";
+import { ChatIcon, ArrowDownIcon } from "@heroicons/react/solid";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Chat from "../components/chatgpt";
-
-import * as THREE from "three";
-import React, { useRef, useEffect, useState } from "react";
-import {
-  Canvas,
-  useFrame,
-  type ThreeElements,
-  useLoader,
-} from "@react-three/fiber";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-
-function Model(props: ThreeElements["mesh"]) {
-  const mesh = useRef<THREE.Mesh>(null!);
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-  useFrame((state, delta) => (mesh.current.rotation.x += delta));
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onClick={() => setActive(!active)}
-      onPointerOver={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-    </mesh>
-  );
-}
-
-function OBJModel() {
-  const obj = useLoader(OBJLoader, "/models/model.obj");
-  obj.scale.set(20, 20, 20); // Set the scale to 1000px x 1000px
-  const mesh = obj.children[0];
-  if (mesh instanceof THREE.Mesh) {
-    mesh.rotation.y = 0.01; // Set the rotation speed
-  }
-  return <primitive object={obj} />;
-}
+import React, { useState } from "react";
 
 const Sixties: NextPage = () => {
   const [translate, setTranslate] = useState(false);
@@ -85,10 +45,13 @@ const Sixties: NextPage = () => {
               <p className="text-lg font-semibold uppercase text-red-500">
                 The 1970s
               </p>
-              <span className=" text-center text-6xl font-extrabold text-red-500">
+              <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 Long Live Big Business
               </span>
-              <p className="col-span-2 mt-8">
+              <p className="mt-2 text-lg font-semibold text-red-600">
+                Created by Kevin Liu
+              </p>
+              <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
                 {`Welcome to the 1970s and beyond, where business and government are one. Project after project, operation after operation is carried out, none with any rhyme or reason. Planes that can’t fly cost the taxpayer billions every year, and wars are fought over little lies the President and his businessmen friends tell on national television. In this section, you will witness the delicate dance between profit and patriotism, as well as the consequences of a system where the lines between public interest and private gain disappear. Reflect upon the challenges posed by a military-industrial complex that transcends mere defense needs, and consider the implications for our democracy, national security, and the pursuit of a more equitable society.
 `}
               </p>
@@ -200,7 +163,7 @@ const Sixties: NextPage = () => {
             onClick={() => setShowHeader(!showHeader)}
             className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
           >
-            <ArrowUpIcon
+            <ArrowDownIcon
               className={
                 showHeader
                   ? "h-6 w-6 text-white duration-150"

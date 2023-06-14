@@ -1,51 +1,11 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { type NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ChatIcon, ArrowUpIcon } from "@heroicons/react/solid";
+import { ChatIcon, ArrowDownIcon } from "@heroicons/react/solid";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Chat from "../components/chatgpt";
-
-import * as THREE from "three";
-import React, { useRef, useEffect, useState } from "react";
-import {
-  Canvas,
-  useFrame,
-  type ThreeElements,
-  useLoader,
-} from "@react-three/fiber";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-
-function Model(props: ThreeElements["mesh"]) {
-  const mesh = useRef<THREE.Mesh>(null!);
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-  useFrame((state, delta) => (mesh.current.rotation.x += delta));
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onClick={() => setActive(!active)}
-      onPointerOver={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-    </mesh>
-  );
-}
-
-function OBJModel() {
-  const obj = useLoader(OBJLoader, "/models/model.obj");
-  obj.scale.set(20, 20, 20); // Set the scale to 1000px x 1000px
-  const mesh = obj.children[0];
-  if (mesh instanceof THREE.Mesh) {
-    mesh.rotation.y = 0.01; // Set the rotation speed
-  }
-  return <primitive object={obj} />;
-}
+import React, { useState } from "react";
 
 const Sixties: NextPage = () => {
   const [translate, setTranslate] = useState(false);
@@ -85,10 +45,13 @@ const Sixties: NextPage = () => {
               <p className="text-lg font-semibold uppercase text-red-500">
                 The 1960s
               </p>
-              <span className=" text-center text-6xl font-extrabold text-red-500">
+              <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 Constant War
               </span>
-              <p className="col-span-2 mt-8">
+              <p className="mt-2 text-lg font-semibold text-red-600">
+                Created by Ranvith Adulla
+              </p>
+              <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
                 {`For a decade widely regarded as the start of the counterculture movement – an era of love and peace and Woodstock – it’s unfortunate that our government still insists on going to war. In their defense, it’s not really their choice. In the 1960s, the military-industrial complex exerts significant influence over government policy. Defense contractors and related industries have been lobbying for increased defense spending, expanding our military operations, and even goading us into war with Vietnam. Their profit margins are soaring and our men are dying. Why does it seem like the contractors are writing our laws and our declarations of war for us? The violence, chaos, protests, and ensuing struggle of the American people against these defense contractors leads our President to coin the term “military-industrial complex,” as a warning of times to come. It seemed benevolent the first 20 years the contractors did this. It’s not anymore.
 `}
               </p>
@@ -193,7 +156,7 @@ const Sixties: NextPage = () => {
             onClick={() => setShowHeader(!showHeader)}
             className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
           >
-            <ArrowUpIcon
+            <ArrowDownIcon
               className={
                 showHeader
                   ? "h-6 w-6 text-white duration-150"
