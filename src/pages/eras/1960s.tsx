@@ -26,12 +26,12 @@ const Sixties: NextPage = () => {
           <ChatIcon className="h-12 w-12" />
         </button>
         <Chat translate={translate} setTranslate={setTranslate} />
-        <section className="scrollbar flex max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
+        <section className="scrollbar max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
           <header
             className={
               showHeader
-                ? "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
-                : "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                ? "relative z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                : "relative z-30 h-0 w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
             }
           >
             <Image
@@ -48,13 +48,25 @@ const Sixties: NextPage = () => {
               <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 Constant War
               </span>
-              <p className="mt-2 text-lg font-semibold text-red-600">
-                Created by Ranvith Adulla
+              <p className="mt-1 text-lg font-semibold text-red-600">
+                Curated by Ranvith Adulla
               </p>
               <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
                 {`For a decade widely regarded as the start of the counterculture movement – an era of love and peace and Woodstock – it’s unfortunate that our government still insists on going to war. In their defense, it’s not really their choice. In the 1960s, the military-industrial complex exerts significant influence over government policy. Defense contractors and related industries have been lobbying for increased defense spending, expanding our military operations, and even goading us into war with Vietnam. Their profit margins are soaring and our men are dying. Why does it seem like the contractors are writing our laws and our declarations of war for us? The violence, chaos, protests, and ensuing struggle of the American people against these defense contractors leads our President to coin the term “military-industrial complex,” as a warning of times to come. It seemed benevolent the first 20 years the contractors did this. It’s not anymore.
 `}
               </p>
+              <button
+                onClick={() => setShowHeader(!showHeader)}
+                className="absolute bottom-4 z-50 mx-auto flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
+              >
+                <ArrowDownIcon
+                  className={
+                    showHeader
+                      ? "h-6 w-6 text-white duration-150"
+                      : "h-6 w-6 rotate-180 text-white duration-150"
+                  }
+                />
+              </button>
             </div>
           </header>
           <section className=" relative flex flex-col items-center duration-150 ">
@@ -151,19 +163,6 @@ const Sixties: NextPage = () => {
 
             <Footer />
           </section>
-
-          <button
-            onClick={() => setShowHeader(!showHeader)}
-            className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
-          >
-            <ArrowDownIcon
-              className={
-                showHeader
-                  ? "h-6 w-6 text-white duration-150"
-                  : "h-6 w-6 rotate-180 text-white duration-150"
-              }
-            />
-          </button>
         </section>
       </div>
     </main>

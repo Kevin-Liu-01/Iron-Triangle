@@ -26,12 +26,12 @@ const Sixties: NextPage = () => {
           <ChatIcon className="h-12 w-12" />
         </button>
         <Chat translate={translate} setTranslate={setTranslate} />
-        <section className="scrollbar flex max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
+        <section className="scrollbar max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
           <header
             className={
               showHeader
-                ? "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
-                : "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                ? "relative z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                : "relative z-30 h-0 w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
             }
           >
             <Image
@@ -43,18 +43,32 @@ const Sixties: NextPage = () => {
             />
             <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-8 ">
               <p className="text-lg font-semibold uppercase text-red-500">
-                The 1970s
+                The 1970s and Modern Day
               </p>
               <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 Long Live Big Business
               </span>
-              <p className="mt-2 text-lg font-semibold text-red-600">
-                Created by Kevin Liu
+              <p className="mt-1 text-lg font-semibold text-red-600">
+                Curated by Kevin Liu
               </p>
               <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
-                {`Welcome to the 1970s and beyond, where business and government are one. Project after project, operation after operation is carried out, none with any rhyme or reason. Planes that can’t fly cost the taxpayer billions every year, and wars are fought over little lies the President and his businessmen friends tell on national television. In this section, you will witness the delicate dance between profit and patriotism, as well as the consequences of a system where the lines between public interest and private gain disappear. Reflect upon the challenges posed by a military-industrial complex that transcends mere defense needs, and consider the implications for our democracy, national security, and the pursuit of a more equitable society.
+                {`Welcome to the 1970s and beyond, where business and government are one. Project after project, operation after operation is carried out, 
+                none with any rhyme or reason. Planes that can’t fly cost the taxpayer billions every year, and wars are fought over dubious circumstances 
+                for businessmen friends. In this section, you will witness the delicate dance between profit and patriotism, as well as the consequences of a system where the lines between public interest and private gain disappear. Reflect upon the challenges posed by a military-industrial complex that transcends mere defense needs, and consider the implications for our democracy, national security, and the pursuit of a more equitable society.
 `}
               </p>
+              <button
+                onClick={() => setShowHeader(!showHeader)}
+                className="absolute bottom-4 z-50 mx-auto flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
+              >
+                <ArrowDownIcon
+                  className={
+                    showHeader
+                      ? "h-6 w-6 text-white duration-150"
+                      : "h-6 w-6 rotate-180 text-white duration-150"
+                  }
+                />
+              </button>
             </div>
           </header>
           <section className=" relative flex flex-col items-center duration-150 ">
@@ -158,19 +172,6 @@ const Sixties: NextPage = () => {
 
             <Footer />
           </section>
-
-          <button
-            onClick={() => setShowHeader(!showHeader)}
-            className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
-          >
-            <ArrowDownIcon
-              className={
-                showHeader
-                  ? "h-6 w-6 text-white duration-150"
-                  : "h-6 w-6 rotate-180 text-white duration-150"
-              }
-            />
-          </button>
         </section>
       </div>
     </main>

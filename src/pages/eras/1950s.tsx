@@ -26,12 +26,12 @@ const Fifties: NextPage = () => {
           <ChatIcon className="h-12 w-12" />
         </button>
         <Chat translate={translate} setTranslate={setTranslate} />
-        <section className="scrollbar flex max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
+        <section className="scrollbar max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
           <header
             className={
               showHeader
-                ? "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
-                : "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                ? "relative z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                : "relative z-30 h-0 w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
             }
           >
             <Image
@@ -48,14 +48,26 @@ const Fifties: NextPage = () => {
               <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 Lone Superpower
               </span>
-              <p className="mt-2 text-lg font-semibold text-red-600">
-                Created by Sharabh Ojha
+              <p className="mt-1 text-lg font-semibold text-red-600">
+                Curated by Sharabh Ojha
               </p>
               <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
                 {
                   "The war has been over for a few years, and yet it seems that we never left. In the 1950s, the business and military-industrial complex holds significant sway over American policy, with the ongoing Korean War and our standoff with the USSR. It makes sense – we can’t let the Communists win on their fronts. Otherwise, they’ll come for us next. As the United States and the Soviet Union engage in an intense arms race and the nation grapples with fears of Communism, defense contractors are successfully advocating against disarmament, arguing instead for increased war production. It’s starting to look like contractors aren’t pressuring policy makers anymore either. Rather, both are in cahoots to heighten defense spending and military preparedness. Endless profits and a country safe from imminent Communist incursion? It’s a win-win situation."
                 }
               </p>
+              <button
+                onClick={() => setShowHeader(!showHeader)}
+                className="absolute bottom-4 z-50 mx-auto flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
+              >
+                <ArrowDownIcon
+                  className={
+                    showHeader
+                      ? "h-6 w-6 text-white duration-150"
+                      : "h-6 w-6 rotate-180 text-white duration-150"
+                  }
+                />
+              </button>
             </div>
           </header>
           <section className=" relative flex flex-col items-center duration-150 ">
@@ -157,19 +169,6 @@ const Fifties: NextPage = () => {
             </div>
             <Footer />
           </section>
-
-          <button
-            onClick={() => setShowHeader(!showHeader)}
-            className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
-          >
-            <ArrowDownIcon
-              className={
-                showHeader
-                  ? "h-6 w-6 text-white duration-150"
-                  : "h-6 w-6 rotate-180 text-white duration-150"
-              }
-            />
-          </button>
         </section>
       </div>
     </main>

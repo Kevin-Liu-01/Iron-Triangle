@@ -26,12 +26,12 @@ const Forties: NextPage = () => {
           <ChatIcon className="h-12 w-12" />
         </button>
         <Chat translate={translate} setTranslate={setTranslate} />
-        <section className="scrollbar flex max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
+        <section className="scrollbar max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-x-hidden overflow-y-scroll">
           <header
             className={
               showHeader
-                ? "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
-                : "absolute z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                ? "relative z-30 h-[calc(100vh-5rem-1.5px)] w-full translate-y-0 overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
+                : "relative z-30 h-0 w-full translate-y-[-100%] overflow-hidden bg-white duration-150 ease-in-out dark:bg-black"
             }
           >
             <Image
@@ -48,8 +48,8 @@ const Forties: NextPage = () => {
               <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
                 The Arsenal of Democracy
               </span>
-              <p className="mt-2 text-lg font-semibold text-red-600">
-                Created by Liam Hoffman
+              <p className="mt-1 text-lg font-semibold text-red-600">
+                Curated by Liam Hoffman
               </p>
               <p className="col-span-2 mt-6 max-w-5xl text-center text-sm sm:text-base">
                 Welcome to the 1940s. You have joined us as we are raring to go
@@ -66,7 +66,19 @@ const Forties: NextPage = () => {
                 Maybe we are extending our war spending far beyond the end of
                 the war as well. But it’s all for the good of our country,
                 right?
-              </p>
+              </p>{" "}
+              <button
+                onClick={() => setShowHeader(!showHeader)}
+                className="absolute bottom-4 z-50 mx-auto flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
+              >
+                <ArrowDownIcon
+                  className={
+                    showHeader
+                      ? "h-6 w-6 text-white duration-150"
+                      : "h-6 w-6 rotate-180 text-white duration-150"
+                  }
+                />
+              </button>
             </div>
           </header>
           <section className=" relative flex flex-col items-center duration-150 ">
@@ -136,19 +148,6 @@ const Forties: NextPage = () => {
             </div>
             <Footer />
           </section>
-
-          <button
-            onClick={() => setShowHeader(!showHeader)}
-            className="absolute bottom-4  z-50 flex animate-bounce items-center justify-center rounded-full bg-red-500 p-2"
-          >
-            <ArrowDownIcon
-              className={
-                showHeader
-                  ? "h-6 w-6 text-white duration-150"
-                  : "h-6 w-6 rotate-180 text-white duration-150"
-              }
-            />
-          </button>
         </section>
       </div>
     </main>
