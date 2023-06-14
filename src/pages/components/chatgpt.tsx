@@ -118,9 +118,9 @@ export default function Chat(props: { setTranslate: any; translate: boolean }) {
 
   const showChat = () => {
     if (props.translate) {
-      return "absolute bottom-4 right-5 flex w-72 flex-col translate-x-0 duration-150 z-40";
+      return "absolute bottom-4 right-5 flex w-72 flex-col translate-x-0 duration-150 z-50";
     } else {
-      return "absolute bottom-4 right-5 flex w-72 flex-col translate-x-[120%] duration-150 z-40";
+      return "absolute bottom-4 right-5 flex w-72 flex-col translate-x-[120%] duration-150 z-50";
     }
   };
 

@@ -60,7 +60,7 @@ const Sixties: NextPage = () => {
       <div className="font-hanken">
         <Navbar />
         <button
-          className="absolute bottom-4 right-5 z-20 rounded-2xl bg-red-500 p-2 text-white shadow-lg  duration-150 hover:bg-red-600"
+          className="absolute bottom-4 right-5 z-40 rounded-2xl bg-red-500 p-2 text-white shadow-lg  duration-150 hover:bg-red-600"
           onClick={() => menuHandler()}
         >
           <ChatIcon className="h-12 w-12" />
