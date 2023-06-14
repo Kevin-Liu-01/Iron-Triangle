@@ -54,13 +54,13 @@ const Home: NextPage = () => {
         <Chat translate={translate} setTranslate={setTranslate} />
         <section className="scrollbar max-h-[calc(100vh-5rem-1.5px)] min-h-[calc(100vh-5rem-1.5px)] overflow-x-hidden overflow-y-scroll">
           <header className="flex min-h-[calc(100vh-5rem-1.5px)] justify-center overflow-hidden border-b border-b-gray-300 dark:border-b-gray-700 sm:max-h-[50rem]">
-            <div className="mx-auto grid max-w-7xl grid-cols-2 px-8">
+            <div className="mx-auto grid max-w-7xl px-8 sm:grid-cols-2">
               <div className=" flex flex-col justify-center">
                 <div className="text-7xl font-extrabold ">
                   War and{" "}
                   <span className="text-red-500	line-through">Peace</span>
                 </div>
-                <div className="mt-4 text-2xl font-light">
+                <div className="mt-4 text-xl font-light sm:text-2xl">
                   How did the influence of{" "}
                   <span className="text-red-500">
                     American business interests
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
                   Find out by exploring our collection of artifacts.
                 </div>
                 <Link href="/artifacts">
-                  <button className="mt-8 flex items-center rounded-lg bg-black px-4 py-2 text-lg font-medium text-white shadow-lg duration-150 hover:bg-red-500 dark:bg-white dark:text-black dark:hover:bg-red-500 sm:text-xl">
+                  <button className="mt-8 flex items-center rounded-lg bg-black px-4 py-2 text-base font-medium text-white shadow-lg duration-150 hover:bg-red-500 dark:bg-white dark:text-black dark:hover:bg-red-500 sm:text-xl">
                     See our Artifacts{" "}
                     <ArrowRightIcon className="ml-2 inline h-6 w-6" />
                   </button>
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
               />
             </div>
           </header>
-          <section className="relative flex h-[calc(100vh-5rem-1.5px)] items-center overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] ">
+          <section className="relative flex items-center overflow-hidden border-b border-b-gray-300 py-8 px-8 duration-150 dark:border-b-gray-700 sm:h-[calc(100vh-5rem-1.5px)] sm:max-h-[50rem] ">
             <div className="mx-auto  grid max-w-7xl  gap-x-12 sm:grid-cols-2">
               <Image
                 src="/images/iron-triangle.png"
@@ -94,10 +94,10 @@ const Home: NextPage = () => {
                 className="mx-auto my-auto w-full duration-150 dark:invert"
               />
               <div className="flex flex-col justify-center ">
-                <div className="text-6xl font-extrabold ">
+                <div className="text-4xl font-extrabold sm:text-6xl ">
                   The <span className="text-red-500">Iron Triangle</span>
                 </div>
-                <div className="mt-4 text-2xl font-light">
+                <div className="mt-4 text-xl font-light sm:text-2xl">
                   The Iron Triangle is a term used to describe the relationship
                   between Congress, Bureaucracy, and Interest Groups. This
                   relationship is often characterized by the exchange of money
@@ -106,16 +106,16 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <section className="relative flex h-[calc(100vh-5rem-1.5px)] items-center overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] ">
+          <section className="relative flex items-center overflow-hidden  border-b border-b-gray-300 py-8 px-8 duration-150 dark:border-b-gray-700 sm:h-[calc(100vh-5rem-1.5px)] sm:max-h-[50rem] ">
             <div className="mx-auto  grid max-w-7xl  gap-x-12 sm:grid-cols-2">
               <div className="flex flex-col justify-center ">
-                <div className="text-6xl font-extrabold ">
+                <div className="text-4xl font-extrabold sm:text-6xl ">
                   The{" "}
                   <span className="text-red-500">
                     Military Industrial Complex
                   </span>
                 </div>
-                <div className="mt-4 text-2xl font-light">
+                <div className="mt-4 text-xl font-light sm:text-2xl">
                   The{" "}
                   <span className="text-red-500">
                     Military Industrial Complex
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
               />
             </div>
           </section>
-          <section className="relative flex h-[calc(100vh-5rem-1.5px)] items-center overflow-hidden border-b border-b-gray-300 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] ">
+          <section className="relative flex h-[calc(100vh-5rem-1.5px)] items-center  overflow-hidden border-b border-b-gray-300 py-8 px-8 duration-150 dark:border-b-gray-700 sm:max-h-[50rem] ">
             <div className="mx-auto  grid max-w-7xl  gap-x-12 sm:grid-cols-2">
               <Image
                 src="/images/platoon.png"
@@ -155,10 +155,10 @@ const Home: NextPage = () => {
                 className="mx-auto my-auto w-full duration-150 dark:invert"
               />
               <div className="flex flex-col justify-center ">
-                <div className="text-6xl font-extrabold ">
+                <div className="text-4xl font-extrabold sm:text-6xl ">
                   A Legacy of <span className="text-red-500">Conflict</span>
                 </div>
-                <div className="mt-4 text-2xl font-light">
+                <div className="mt-4 text-xl font-light sm:text-2xl">
                   From Vietnam to Iraq, the United States has been involved in{" "}
                   <span className="text-red-500">conflicts</span> all over the
                   world. <span className="text-red-500">For each one, </span>{" "}
@@ -168,7 +168,7 @@ const Home: NextPage = () => {
                   </span>{" "}
                   has played a role in shaping the outcome.
                 </div>
-                <div className="mt-4 grid grid-cols-4 gap-4">
+                <div className="mt-4 grid grid-cols-4 gap-2 sm:gap-4">
                   <Link
                     href="/eras/1940s"
                     className="rounded-lg border-2 border-red-500 py-1 px-2 text-center text-lg duration-150 hover:bg-red-500"
@@ -198,13 +198,13 @@ const Home: NextPage = () => {
             </div>
           </section>
           <section className="relative mx-auto min-h-[calc(100vh-5rem-1.5px)] max-w-7xl gap-8 overflow-hidden px-8 py-12 duration-150  ">
-            <p className=" text-center text-6xl font-extrabold uppercase">
+            <p className=" pb-8 text-center text-5xl font-extrabold uppercase sm:pb-0 sm:text-6xl">
               THE BIGGEST PLAYERS
             </p>
 
             {/*company images are all different sizes, must be sized to fit with each other perfectly */}
 
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
               {companies.map((company) => (
                 <div
                   key={company.name}

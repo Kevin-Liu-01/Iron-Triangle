@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <nav className="relative z-50 border-b-[1.5px] border-gray-300 bg-white text-gray-900 shadow-lg duration-75 dark:border-gray-700 dark:bg-black dark:text-gray-400">
       <div className="mx-auto flex max-w-7xl flex-row justify-center">
-        <div className="flex flex-row items-center">
+        <Link href="/" className="flex flex-row items-center">
           <Image
             src="/images/peace.svg"
             alt="logo"
@@ -65,29 +65,27 @@ const Navbar = () => {
             height={400}
             width={400}
           />
-          <Link href="/">
-            <h1 className="relative hidden select-none text-2xl font-extrabold tracking-tight duration-75 dark:text-white sm:inline lg:text-2xl ">
-              Iron Triangle
-            </h1>
-          </Link>
-        </div>
+          <h1 className="relative hidden select-none text-2xl font-extrabold tracking-tight duration-75 dark:text-white sm:inline lg:text-2xl ">
+            Iron Triangle
+          </h1>
+        </Link>
 
-        <div className="mx-auto hidden flex-row items-center text-sm lg:flex">
+        <div className="flex  flex-row items-center text-sm sm:mx-auto">
           <Link
             href="/"
-            className="relative mx-4 flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] "
+            className="relative mx-4 hidden select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] sm:flex "
           >
             <HomeIcon className="mr-2 h-4 w-4" /> Home
           </Link>
           <Link
             href="/artifacts"
-            className="relative mx-4 flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] "
+            className="relative flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] sm:mx-4 "
           >
             <ClockIcon className="mr-2 h-4 w-4" /> Eras
           </Link>
           <Link
             href="/sources"
-            className="relative mx-4 flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] "
+            className="relative flex select-none items-center rounded-lg py-1 px-2 text-lg font-semibold tracking-tight duration-150 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-[#212020] sm:mx-4 "
           >
             <ClipboardListIcon className="mr-2 h-4 w-4" /> Sources
           </Link>

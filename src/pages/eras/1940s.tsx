@@ -79,7 +79,7 @@ const Forties: NextPage = () => {
               alt="1940s banner"
               width={1000}
               height={1000}
-              className="absolute w-full opacity-20"
+              className="absolute h-full object-cover opacity-20 sm:w-full sm:object-center"
             />
             <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-8 ">
               <p className="text-lg font-semibold uppercase text-red-500">
@@ -89,23 +89,25 @@ const Forties: NextPage = () => {
                 The Arsenal of Democracy
               </span>
               <p className="col-span-2 mt-8">
-                In the 1940s, as the United States fought in World War II,
-                defense contractors emerged as key players. They produced
-                weapons and supplies vital to the war effort, gaining
-                significant financial resources and influence. With thousands of
-                employees and operations across the country, defense contractors
-                held political sway, pressuring lawmakers to support their
-                interests. The close relationship between the government and
-                defense contractors solidified, shaping defense policies and
-                budgets. This influential dynamic, known as the military
-                industrial complex, continued to impact the nation long after
-                the 1940s, raising ongoing debates about the balance between
-                national security and business interests.
+                Welcome to the 1940s. You have joined us as we are raring to go
+                to war against the Nazis in Europe and the Japanese in Asia. Our
+                greatest allies today are our defense contractors, producing our
+                weapons and supplies vital to the war effort, the true patriots
+                they are. Thousands of men and women across the country work in
+                operations that enable our men to win battles overseas, and in
+                the halls of Congress, defense contractors are some of the
+                biggest proponents of our noble war. The term
+                “military-industrial complex” does not exist yet. Yes, maybe
+                these contractors are pressuring our lawmakers to support their
+                war-hawkish interests. Maybe our budgets are being toyed with.
+                Maybe we are extending our war spending far beyond the end of
+                the war as well. But it’s all for the good of our country,
+                right?
               </p>
             </div>
           </header>
           <section className=" relative flex flex-col items-center duration-150 ">
-            <div className="w-[100vw] bg-gray-200 p-8 dark:bg-[#212020]">
+            <div className="w-[100vw] bg-gray-200 p-8 dark:bg-[#101010]">
               <div className="mx-auto grid max-w-7xl gap-x-12 sm:grid-cols-2">
                 <Image
                   src="/images/artifacts/truman-committee.jpg"
@@ -114,28 +116,32 @@ const Forties: NextPage = () => {
                   width={1000}
                   className="mx-auto my-auto w-full duration-150 "
                 />
-                <div className="flex flex-col justify-center ">
-                  <div className="text-5xl font-extrabold ">
+                <div className="mt-4 flex flex-col justify-center sm:mt-0">
+                  <div className="text-3xl font-extrabold sm:text-5xl ">
                     Artifact 1:{" "}
                     <span className="text-red-500">
                       The Truman Committee (1941)
                     </span>
                   </div>
-                  <div className="mt-4 text-2xl font-light">
-                    Like the Nye Committee of the 1930s, the 1941 Truman
-                    Committee investigated the military-industrial complex and
-                    its impact on the war effort during World War II.
+                  <div className="mt-4 text-xl font-light sm:text-2xl">
+                    During World War II, the United States Senate Special
+                    Committee to Investigate the National Defense Program, or
+                    the Truman Committee, was established in 1941. Led by
+                    Senator Harry S. Truman, the committee aimed to scrutinize
+                    the efficiency, effectiveness, and expenditures of the
+                    national defense program, much like the Nye Committee did 7
+                    years ago.
                   </div>
                 </div>
               </div>{" "}
             </div>
 
-            <div className="col-span-2 mx-auto max-w-7xl py-4">
+            <div className="mx-auto max-w-7xl py-4 px-4 sm:col-span-2 sm:px-0">
               {
-                "During World War II, the United States Senate Special Committee to Investigate the National Defense Program, popularly known as the Truman Committee, was established in 1941. Led by Senator Harry S. Truman, the committee aimed to scrutinize the efficiency, effectiveness, and expenditures of the national defense program. Drawing inspiration from the Nye Committee of the 1930s, which examined the role of the munitions industry in the United States' entry into World War I, the Truman Committee focused on investigating the military-industrial complex (MIC) and its impact on the war effort. Its main objective was to ensure that defense contracts were allocated efficiently and free from wasteful practices, fraud, and excessive profiteering. Through a series of hearings and investigations, the Truman Committee thoroughly examined various aspects of defense production, procurement, and logistics. It delved into the operations of defense contractors, government agencies, and military branches to uncover inefficiencies and corruption within the war machinery. The committee's investigations exposed alarming instances of overpricing, substandard production, and fraudulent practices by defense contractors. These findings shed light on the urgent need for transparency, accountability, and cost-effectiveness in defense contracting. As a result of the committee's efforts, significant reforms were implemented in defense procurement and production. The Truman Committee recommended changes such as introducing competitive bidding processes, implementing cost controls, and establishing standardized pricing to enhance efficiency and eliminate wasteful practices. These reforms resulted in substantial cost savings, streamlined production, and improved oversight of defense spending. Furthermore, the Truman Committee's investigations brought attention to the complex relationship between business interests and the government in times of war. The committee's findings highlighted the potential for undue influence, conflicts of interest, and the necessity of robust oversight mechanisms to prevent abuse and corruption."
+                "Drawing inspiration from the Nye Committee of the 1930s, which examined the role of the munitions industry in the United States' entry into World War I, the Truman Committee focused on investigating the military-industrial complex (MIC) and its impact on the war effort. Its main objective was to ensure that defense contracts were allocated efficiently and free from wasteful practices, fraud, and excessive profiteering. Through a series of hearings and investigations, the Truman Committee thoroughly examined various aspects of defense production, procurement, and logistics. It delved into the operations of defense contractors, government agencies, and military branches to uncover inefficiencies and corruption within the war machinery. The committee's investigations exposed alarming instances of overpricing, substandard production, and fraudulent practices by defense contractors. These findings shed light on the urgent need for transparency, accountability, and cost-effectiveness in defense contracting. As a result of the committee's efforts, significant reforms were implemented in defense procurement and production. The Truman Committee recommended changes such as introducing competitive bidding processes, implementing cost controls, and establishing standardized pricing to enhance efficiency and eliminate wasteful practices. These reforms resulted in substantial cost savings, streamlined production, and improved oversight of defense spending. Furthermore, the Truman Committee's investigations brought attention to the complex relationship between business interests and the government in times of war. The committee's findings highlighted the potential for undue influence, conflicts of interest, and the necessity of robust oversight mechanisms to prevent abuse and corruption."
               }
             </div>
-            <div className="w-[100vw] bg-gray-200 p-8 dark:bg-[#212020]">
+            <div className="w-[100vw] bg-gray-200 p-8 dark:bg-[#101010]">
               <div className="mx-auto grid max-w-7xl gap-x-12 sm:grid-cols-2">
                 <Image
                   src="/images/artifacts/b17.jpg"
@@ -145,13 +151,13 @@ const Forties: NextPage = () => {
                   className="mx-auto my-auto w-full duration-150 "
                 />
                 <div className="flex flex-col justify-center ">
-                  <div className="text-5xl font-extrabold ">
+                  <div className="text-3xl font-extrabold sm:text-5xl ">
                     Artifact 2:{" "}
                     <span className="text-red-500">
                       Boeing Company Plant 2 (1943)
                     </span>
                   </div>
-                  <div className="mt-4 text-2xl font-light">
+                  <div className="mt-4 text-xl font-light sm:text-2xl">
                     During World War 2, an immense 297,000 aircraft were
                     produced in the United States. Yet, less then 26
                     manufacturers provided these aircraft. Across the defense
@@ -162,7 +168,7 @@ const Forties: NextPage = () => {
               </div>{" "}
             </div>
 
-            <div className="col-span-2 mx-auto max-w-7xl py-4">
+            <div className="col-span-2 mx-auto max-w-7xl py-4 px-4 sm:px-0">
               {`In World War II, large manufacturing firms enjoyed a disproportionate share of defense spending, as the top 100 prime contractors claimed about two-thirds of the total value of awards. The concentration of military research and development contracts was even more pronounced, with the top 68 corporations receiving two-thirds of the R&D awards, and the top 10 securing nearly two-fifths of the total. During the war, the government emerged as the dominant investor, contributing over $17 billion, which accounted for about two-thirds of all investment. In addition to funding ammunition plants, the government embarked on ambitious construction projects, including shipyards, steel and aluminum mills, and chemical plants. The aircraft industry experienced remarkable growth, with government investment and procurement propelling it to become the nation's largest sector, producing a staggering 297,000 aircraft by the war's end. This level of government involvement could be characterized as "war socialism." However, there was a distinctly American twist to this wartime economy that merits the term "war fascism." Rather than operating directly, the government relied on a select group of contractors to manage the government-financed plants. Remarkably, just 26 firms were entrusted with the use of half the value of all governmentally financed industrial facilities leased to private contractors. And just 3 - Boeing, Vega, and Douglas - built the 3rd most-produced bomber of all time, the B-17. This concentration of power among a small group of contractors underscored the entanglement of business interests with the government during the war. It highlighted the influence wielded by these contractors in shaping the course of war production and decision-making. The allocation of significant resources and control over crucial industrial facilities to a limited number of firms revealed the intricate web of relationships between the military-industrial complex and the government.`}
             </div>
             <Footer />

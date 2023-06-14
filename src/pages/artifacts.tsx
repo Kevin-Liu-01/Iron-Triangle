@@ -91,7 +91,7 @@ const Artifacts: NextPage = () => {
               1970s+
             </div>
           </Link>
-          <div className="z-5 absolute col-span-2 flex h-full w-full items-center justify-center">
+          <div className="z-5 absolute col-span-2  hidden h-full w-full items-center justify-center sm:flex">
             <Link href="/" className="z-20 mx-auto my-auto">
               <Image
                 src="/images/MIC.png"
