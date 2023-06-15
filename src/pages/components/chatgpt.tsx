@@ -10,7 +10,7 @@ import {
 import { env } from "../../env.mjs";
 import Typewriter from "typewriter-effect";
 import { Configuration, OpenAIApi } from "openai";
-import { XIcon } from "@heroicons/react/solid";
+import { XIcon, StatusOnlineIcon } from "@heroicons/react/solid";
 const configuration = new Configuration({
   apiKey: env.NEXT_PUBLIC_OPENAI_API,
 });
@@ -25,6 +25,7 @@ export default function Chat(props: { setTranslate: any; translate: boolean }) {
   const [query, setQuery] = useState("");
   const [message, setMessage] = useState("");
   const [history, setHistory] = useState([] as string[][]);
+  const [loading, setLoading] = useState(false);
 
   //OpenAI integration
   // const [roles, setRoles] = useState<Roles>("user");
@@ -34,6 +35,8 @@ export default function Chat(props: { setTranslate: any; translate: boolean }) {
   useEffect(() => {
     async function fetchData() {
       if (submit && message) {
+        setLoading(true);
+
         const context =
           history.length >= 2
             ? // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
@@ -58,7 +61,7 @@ export default function Chat(props: { setTranslate: any; translate: boolean }) {
           frequency_penalty: 0,
           presence_penalty: 0,
         });
-
+        setLoading(false);
         setHistory(
           // Replace the state
           [
@@ -204,24 +207,40 @@ export default function Chat(props: { setTranslate: any; translate: boolean }) {
         </div>
 
         <div className=" border-t border-gray-600 bg-gray-50 p-4 duration-150 dark:bg-black">
-          <form
-            onSubmit={(e) => setSubmission(e)}
-            className="flex rounded-lg border  border-gray-400 dark:border-gray-600"
-          >
-            <input
-              type="text"
-              placeholder="Type a message..."
-              className="w-full rounded-l-lg bg-gray-100 py-2 px-4 text-gray-900 duration-150 focus:outline-none focus:ring-1 focus:ring-red-500 dark:bg-gray-800 dark:text-gray-200"
-              value={query}
-              onChange={(e) => handleQuery(e.target.value)}
-            />
-            <button
-              type="submit"
-              className=" flex items-center rounded-r-lg bg-red-500 pt-2 pb-3 pl-3 pr-2 text-white duration-150 ease-in-out hover:bg-red-600 "
+          {loading ? (
+            <div className="flex rounded-lg border  border-gray-400 dark:border-gray-600">
+              <input
+                type="text"
+                placeholder="Type a message..."
+                className="w-full rounded-l-lg bg-gray-100 py-2 px-4 text-gray-900 opacity-50 duration-150 focus:outline-none focus:ring-1 focus:ring-red-500 dark:bg-gray-800 dark:text-gray-200"
+                value={query}
+                disabled
+                onChange={(e) => handleQuery(e.target.value)}
+              />
+              <button className=" flex items-center rounded-r-lg bg-red-500 bg-opacity-70 px-[0.63rem] py-[0.6rem] text-white duration-150 ease-in-out ">
+                <StatusOnlineIcon className="inline h-6 w-6 animate-spin" />
+              </button>
+            </div>
+          ) : (
+            <form
+              onSubmit={(e) => setSubmission(e)}
+              className="flex rounded-lg border  border-gray-400 dark:border-gray-600"
             >
-              <PaperAirplaneIcon className="inline h-6 w-6 rotate-45" />
-            </button>
-          </form>
+              <input
+                type="text"
+                placeholder="Type a message..."
+                className="w-full rounded-l-lg bg-gray-100 py-2 px-4 text-gray-900 duration-150 focus:outline-none focus:ring-1 focus:ring-red-500 dark:bg-gray-800 dark:text-gray-200"
+                value={query}
+                onChange={(e) => handleQuery(e.target.value)}
+              />
+              <button
+                type="submit"
+                className=" flex items-center rounded-r-lg bg-red-500 pt-2 pb-3 pl-3 pr-2 text-white duration-150 ease-in-out hover:bg-red-600 "
+              >
+                <PaperAirplaneIcon className="inline h-6 w-6 rotate-45" />
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>
