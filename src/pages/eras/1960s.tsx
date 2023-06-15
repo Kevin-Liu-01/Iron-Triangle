@@ -81,7 +81,7 @@ const Sixties: NextPage = () => {
                 />
                 <div className="flex flex-col justify-center sm:col-span-2">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 1:{" "}
+                    Artifact 6:{" "}
                     <span className="text-red-500">
                       {`Eisenhower's Farewell Speech: Warning about the
                       Military-Industrial Complex (1961)`}
@@ -138,7 +138,7 @@ const Sixties: NextPage = () => {
                 />
                 <div className="flex flex-col justify-center sm:col-span-2">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 2:{" "}
+                    Artifact 7:{" "}
                     <div className="inline text-red-500">
                       <span className="italic">Father and Napalmed Child</span>{" "}
                       (Anonymous, 1964)

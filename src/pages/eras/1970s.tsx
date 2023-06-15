@@ -83,7 +83,7 @@ const Sixties: NextPage = () => {
                 />
                 <div className="flex flex-col justify-center sm:col-span-2">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 1:{" "}
+                    Artifact 8:{" "}
                     <div className="inline text-red-500">
                       <span className="italic">The C-5A Scandal</span> (Berkeley
                       Rice, 1971)
@@ -114,7 +114,7 @@ const Sixties: NextPage = () => {
                 />
                 <div className="mt-4 flex flex-col justify-center sm:col-span-2 sm:mt-0">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 2:{" "}
+                    Artifact 9:{" "}
                     <span className="text-red-500">
                       Authorization for Use of Military Force Against Iraq
                       Resolution (2002)
@@ -154,7 +154,7 @@ const Sixties: NextPage = () => {
                 />
                 <div className="mt-4 flex flex-col justify-center sm:mt-0">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 3:{" "}
+                    Artifact 10:{" "}
                     <span className="text-red-500">
                       F-35 Joint Strike Fighter (Modern Day)
                     </span>

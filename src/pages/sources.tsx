@@ -103,7 +103,7 @@ const Home: NextPage = () => {
               <p className="text-2xl font-extrabold">The 1950s</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 1 - Anti-U.S. Propaganda Posters
+                  Artifact 3 - Anti-U.S. Propaganda Posters
                   <Link href="/eras/1950s">
                     <Image
                       src="/images/artifacts/uncle-sam.jfif"
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 2: Gloriosa Victoria
+                  Artifact 4: Gloriosa Victoria
                   <Link href="/eras/1950s">
                     <Image
                       src="/images/artifacts/gloriosa-victoria.jpg"
@@ -167,7 +167,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 3: The Power Elite
+                  Artifact 5: The Power Elite
                   <Link href="/eras/1950s">
                     <Image
                       src="/images/artifacts/power-elite.jpg"
@@ -204,7 +204,7 @@ const Home: NextPage = () => {
               <p className="text-2xl font-extrabold">The 1960s</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 1 -{" "}
+                  Artifact 6 -{" "}
                   {`Eisenhower's Warning about the Military-Industrial Complex`}
                   <Link href="/eras/1960s">
                     <iframe
@@ -237,7 +237,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 2: Father and Napalmed Child
+                  Artifact 7: Father and Napalmed Child
                   <Link href="/eras/1960s">
                     <Image
                       src="/images/artifacts/napalm.jpg"
@@ -274,7 +274,7 @@ const Home: NextPage = () => {
               <p className="text-2xl font-extrabold">The 1970s+</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 1 - The C5A Scandal
+                  Artifact 8 - The C5A Scandal
                   <Link href="/eras/1970s">
                     <Image
                       src="/images/artifacts/c5a.jpg"
@@ -306,7 +306,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 2: Iraq War Resolution
+                  Artifact 9: Iraq War Resolution
                   <Link href="/eras/1970s">
                     <Image
                       src="/images/artifacts/iraq-resolution.jpg"
@@ -338,7 +338,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="h-full rounded-md bg-white p-2 shadow-lg dark:bg-black">
-                  Artifact 3: F-35 Joint Strike Fighter
+                  Artifact 10: F-35 Joint Strike Fighter
                   <Link href="/eras/1970s">
                     <Image
                       src="/images/artifacts/f35.jfif"

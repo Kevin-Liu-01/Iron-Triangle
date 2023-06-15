@@ -101,7 +101,13 @@ const Home: NextPage = () => {
                   The Iron Triangle is a term used to describe the relationship
                   between Congress, Bureaucracy, and Interest Groups. This
                   relationship is often characterized by the exchange of money
-                  for political favors.
+                  for political favors.{" "}
+                  <span className="text-red-500">
+                    The Iron Triangle also identifies the mechanisms of the{" "}
+                    <b>Military Industrial Complex</b>, which is the
+                    relationship between the military, the government, and the
+                    defense industry.
+                  </span>
                 </div>
               </div>
             </div>
@@ -166,7 +172,10 @@ const Home: NextPage = () => {
                   <span className="text-red-500">
                     military industrial complex
                   </span>{" "}
-                  has played a role in shaping the outcome.
+                  has played a role in shaping the outcome. Defense contractors,
+                  lobbyists, and other influential stakeholders have displayed
+                  considerable power, raising questions about the motivations of
+                  the {`nation's`} global military involvement.
                 </div>
                 <div className="mt-4 grid grid-cols-4 gap-2 sm:gap-4">
                   <Link

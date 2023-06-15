@@ -82,7 +82,7 @@ const Fifties: NextPage = () => {
                 />
                 <div className="flex flex-col justify-center ">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 1:{" "}
+                    Artifact 3:{" "}
                     <span className="text-red-500">
                       Anti-U.S. Propaganda Posters from the Korean War (1950)
                     </span>
@@ -114,7 +114,7 @@ const Fifties: NextPage = () => {
                 />
                 <div className="flex flex-col justify-center ">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 2:{" "}
+                    Artifact 4:{" "}
                     <span className="italic text-red-500">
                       Gloriosa Victoria{" "}
                     </span>
@@ -145,7 +145,7 @@ const Fifties: NextPage = () => {
                 />
                 <div className="flex flex-col justify-center sm:col-span-2">
                   <div className="text-3xl font-extrabold sm:text-5xl ">
-                    Artifact 3:{" "}
+                    Artifact 5:{" "}
                     <span className="italic text-red-500">The Power Elite</span>{" "}
                     <span className=" text-red-500">(1956)</span>
                   </div>

@@ -20,6 +20,7 @@ delete configuration.baseOptions.headers["User-Agent"];
 const openai = new OpenAIApi(configuration);
 
 // type Roles = "user" | "assistant" | "system";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Chat(props: { setTranslate: any; translate: boolean }) {
   const { data: session } = useSession();
   const [query, setQuery] = useState("");
