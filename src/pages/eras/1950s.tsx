@@ -46,7 +46,7 @@ const Fifties: NextPage = () => {
                 The 1950s
               </p>
               <span className=" text-center text-5xl font-extrabold text-red-500 sm:text-6xl">
-                Lone Superpower
+                The Lone Superpower
               </span>
               <p className="mt-1 text-lg font-semibold text-red-600">
                 Curated by Sharabh Ojha
