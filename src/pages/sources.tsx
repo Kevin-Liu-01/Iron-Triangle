@@ -174,7 +174,7 @@ const Home: NextPage = () => {
                       alt="logo"
                       height={400}
                       width={400}
-                      className="mx-auto h-[20rem] w-full overflow-hidden rounded-lg object-cover p-2"
+                      className="mx-auto h-[20rem] w-full overflow-hidden rounded-lg object-cover object-top p-2"
                     />
                   </Link>
                   <div className="grid grid-cols-3 gap-2">
